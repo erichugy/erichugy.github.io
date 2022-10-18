@@ -1,0 +1,98 @@
+:root {
+    /*color-palate*/
+    --color-1: #336699;
+    --color-2: #F0F0C9;
+    --color-3: #86BBD8;
+    --color-4: #2F4858;
+    --color-5: #786266;
+    --text-font: "Georgia";
+    --title-font: "Times New Roman";
+}
+
+
+.wrapper {
+    max-width: 960px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+
+/*universal selector*/
+body {
+    color:wheat;
+    background-color: rgba(0, 0, 0, 0.6);
+    font-family: var(--text-font), serif;
+}
+
+.title {
+    color: var(--color-1);
+    font-size: 10em;
+    font-family: var(--title-font), serif;
+}
+
+.subtitle {
+    color: var(--color-3);
+    text-align: center;
+    text-transform: capitalize;
+    width:100%;
+    text-align:center;
+}
+h1 {
+    font-family: var(--title-font), serif;
+}
+
+.navigation-bar {
+    font-size: 5em;
+    font-family: var(--text-font), serif;
+    padding: 14px 16px;
+    margin: 5px;
+    font-weight: 2px;
+    text-decoration: underline;
+    color: var(--dark-slate-gray);
+    background-color: rgb(255, 255, 255);
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 5px;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #111;
+}
+/* li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #04AA6D;
+} */
+
+
+/* .navigation-bar {
+
+} */
+
+
+/* body {
+
+}
+head {
+
+} */
