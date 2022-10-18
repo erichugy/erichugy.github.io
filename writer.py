@@ -31,8 +31,9 @@ def experience(pos = None, firm = None, date = None):\
     lines = [
         f"<p>",
         f"\t<br>",
-        f"\t<span style='float: right'><b>{date}</b></span>",
         f"\t<span style='float: left'><b>{pos}, {firm}</b></span>",
+        f"\t<span style='float: right'><b>{date}</b></span>",
+
         f"</p>",
         f"<br>",
         f"{bullet_points}",
