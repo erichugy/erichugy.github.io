@@ -15,13 +15,13 @@ def experience(pos = None, firm = None, date = None):\
         count = 0
         while True:
             count += 1
-            b = "• " + input(f"Enter Bullet Point {count}: ") +"<br>"
+            b = input(f"Enter Bullet Point {count}: ")
             if not b or b == " ":
                 break
             elif count > 10:
                 raise RuntimeError("Count Reached 10")
             else:
-                bullet_points.append(b)
+                bullet_points.append("- " + b +"<br>")
         bullet_points = "\n".join(bullet_points)
 
 
@@ -31,15 +31,31 @@ def experience(pos = None, firm = None, date = None):\
     lines = [
         f"<p>",
         f"\t<br>",
-        f"\t\tspan style='float: right'><b>{date}</b></span>",
-        f"\t\t<span style='float: left'><b>{pos}, {firm}</b></span>",
+        f"\t<span style='float: right'><b>{date}</b></span>",
+        f"\t<span style='float: left'><b>{pos}, {firm}</b></span>",
         f"</p>",
         f"<br>",
-        f"{bullet_points}"
+        f"{bullet_points}",
         f"<p></p>"
     ]
+    string = ""
+    for line in lines:
+        string += line + "\n"
 
-    return lines
+    return string
 
 if __name__ =="__main__":
-    experience()
+    def main():
+        filename = 'out.html'
+        try:
+            with open(filename,mode = "a") as f:
+                f.writelines(experience())
+        except FileNotFoundError:
+            try:
+                with open(filename,mode = "w") as f:
+                    f.writelines(experience(),)
+            except:
+                f.close()
+        except:
+            f.close()
+    main()
