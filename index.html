@@ -1,12 +1,42 @@
+<!--
+    Hi,
+        If you're reading this and are wondering why there are so many comments throughout the code,
+    it is because I am learning HTML, CSS, and (hopefully) Javascript as I code this webpage,
+    so this also serves as notes for me in the future. Apoligies for the mess.
+    Also, I am self taught, meaning I may have overlooked many best practices when creating
+    this webpage. If you have any comments or suggestions on how to improve, please feel free
+    to email me, I'd love learn from my mistakes.
+
+    Otherwise, enjoy your stay!
+
+    Best,
+    - Eric
+-->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>Eric Huang</title>
 
+    <!-- css files -->
+    <!-- if css file is in another folder, do the relative path i.e., "../css/style.css" -->
     <link rel="stylesheet" type="text/css" href = "./css/style.css">
-    <!--if css file is in another folder, do the relative path i.e., "../css/style.css"-->
+
+    <!-- To normalize the differences between different browsers-->
+    <link rel="stylesheet" href="https://cdnjs.cloudglare.com/ajax/libs/normalize.min.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+    integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc="
+    crossorigin="anonymous"
+    />
+
+    <!-- Update these with your own fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap"
+    rel="stylesheet">
+
 
     <!--meta tags-->
+
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
     <!--Define keywords for search engines:-->
@@ -21,8 +51,8 @@
     <!--Define the author of a page:-->
     <meta name="author" content="Eric Huang">
 
-    <!--Refreshes document every 30 seconds-->
-    <meta http-equiv="refresh" content="30">
+    <!-- Refreshes document every 10 minutes -->
+    <meta http-equiv="refresh" content="600">
 
     <!--Setting the viewport to make your website look good on all devices-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,53 +69,70 @@
 
         <!-- Header -->
         <header id="header">
-            <!-- <div class="logo">
-                some logo
-            </div> -->
-            <div class="content">
-                <h1 class="title">Eric<br>Huang</h1>
-                <p> <a>McGill University Student '24</a>
-                    <br>
-                </p>
+            <div class="logo">
+                <img src="./img/logo.png" alt="Logo">
             </div>
 
-            <!-- <h1 class="navigation-bar">Portfolio</h1> -->
-            <!--navigation menu (if you have one)-->
-            <nav>
-                <ul>
-                    <li><a href="#about-me">About Me</a></li>
-                    <li><a href="#work">Work & Leadership Experiences</a></li>
-                    <li><a href="#projects">Programming Projects</a></li>
-                    <li><a href="#resume">Resume</a></li>
-                    <li><a href="#contact-info">Contact Information</a></li>
+            <!--Note! aria label is like the alt of elements-->
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="buttom-image-maybe"></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home">Home</a></li>
+                    <li class="nav__item"><a href="#about-me">About Me</a></li>
+                    <li class="nav__item"><a href="#work">Work Experiences</a></li>
+                    <li class="nav__item"><a href="#projects">Programming Projects</a></li>
+                    <li class="nav__item"><a href="#resume">Resume</a></li>
+                    <li class="nav__item"><a href="#contact-info">Contact Information</a></li>
                 </ul>
             </nav>
         </header>
+
         <main>
-            <article id="about-me">
-                <h2 class="subtitle">About Me</h2>
-                <p>
-                    Welcome! My name is Eric and I'm a second-year McGil University student
-                    graduating in December 2024. I'm currently majoring in Finance and minoring
-                    in Computer Science. I grew up on the West side of Montreal and studied at
-                    John Abbott College in their Honour Sciences program. I am passionate about
-                    both business and technology and hope to help make technology accessible to
-                    all generations.
-                </p>
-            </article>
-            <article id="work">
-                <h2 class="subtitle">Work</h2>
-                <span class="image main"><img src="./Camilla Sophie Djamalov_files/webD.jpg" alt=""></span>
+            <!-- Introduction -->
+            <section class="intro" id="home">
+                <h1 class="section__title section__title--intro">
+                    Hi, I am <strong>Eric Huang</strong>
+                </h1>
+                <p class="section__subtitle section__subtitle--intro">McGill Univeristy Student '24</p>
+                <img src="./img/headshot.jpg" alt="Headshot">
+
+            </section>
+
+
+            <!-- About me -->
+            <section class="about-me" id="about-me">
+                <h2 class="section__title section__title--about-me">Who I Am</h2>
+                <p class="section__subtitle section__subtitle--about-me"></p>
+                <div class="about-me__body">
+                    <p>
+                        Welcome! My name is Eric and I'm a second-year McGil University student
+                        graduating in December 2024. I'm currently majoring in Finance and minoring
+                        in Computer Science. I grew up on the West side of Montreal and studied at
+                        John Abbott College in their Honour Sciences program. I am passionate about
+                        both business and technology and hope to help make technology accessible to
+                        all generations.
+                    </p>
+                </div>
+
+                <img src="./img/cropped_timeout.jpg" alt="Cropped Picture of Timeout Market">
+            </section>
+
+            <!-- Work -->
+            <section class="work" id="work">
+                <h2 class="section__title section__title--work">Work Experiences</h2>
+                <span class="image main"><img src="./img/work_main.jpg" alt=""></span>
                 <p>
                     <br>
                     <span style='float: left'><b>Products Commercial Strategies Intern, Life Cycle Value Team, Pratt & Whitney Canada</b></span>
                     <span style='float: right'><b>September 2022 - December 2022</b></span>
                 </p>
                 <br>
-                • Developed and distributed Python program (employing Pandas) to automate the parsing and cleansing of data, reducing processing time from a month to 5 minutes and facilitating the identification of problematic parts in aircraft components<br>
-                • Designed dynamic dashboards in Power BI to identify and present potential cost saving opportunities to management, to provide visual data-driven support in internal and external business negotiations, and to keep track of LCV savings ($6 million CAD YTD)<br>
-                • Developed custom functions in the M formula language to automate 10+ data cleaning steps in Power Query per dataset<br>
-                • Taught power query automation using M to coworkers empowering them to program custom data cleaning methods<br>
+                •	Developed and distributed Python program (employing Pandas) to automate the parsing and cleansing of data, reducing processing time from a month to 5 minutes and facilitating the identification of problematic parts in aircraft components<br>
+                •	Designed dynamic dashboards in Power BI to identify and present potential cost saving opportunities to management, to provide visual data-driven support in internal and external business negotiations, and to keep track of LCV savings ($6 million CAD YTD)<br>
+                •	Developed custom functions in the M formula language to automate 10+ data cleaning steps in Power Query per dataset<br>
+                •	Taught power query automation using M to coworkers empowering them to program custom data cleaning methods<br>
                 <p></p>
                 <br>
                 <span style="float: right"><b>June 2019 - September 2019</b></span>
@@ -96,31 +143,77 @@
                 • Detected bugs in an appointment booking software used by 300,000 patients and alerted the programmers of them.<br>
                 <p></p>
 
-            </article>
-
-            <section>
-                <h2>
-                    Articles like blogs (if any)
-                </h2>
-                <article>
-                    <section>
-                        <h3>Specific blog post</h3>
-                    </section>
-                </article>
             </section>
-            <aside>
-                <h2>
-                    Aside Stuff
-                </h2>
-                <p>
-                    Stuff that isn't relevant to the main content of the page
-                </p>
-            </aside>
 
+            <!-- Volunteer work-->
+            <section class="volunteer" id="volunteer">
+<!--
+                <h2 class="section__title section__title--work">Work Experiences</h2>
+                <span class="image main"><img src="./img/work_main.jpg" alt=""></span>
+                <p>
+                    <br>
+                    <span style='float: left'><b>Products Commercial Strategies Intern, Life Cycle Value Team, Pratt & Whitney Canada</b></span>
+                    <span style='float: right'><b>September 2022 - December 2022</b></span>
+                </p>
+                <br>
+                •	Developed and distributed Python program (employing Pandas) to automate the parsing and cleansing of data, reducing processing time from a month to 5 minutes and facilitating the identification of problematic parts in aircraft components<br>
+                •	Designed dynamic dashboards in Power BI to identify and present potential cost saving opportunities to management, to provide visual data-driven support in internal and external business negotiations, and to keep track of LCV savings ($6 million CAD YTD)<br>
+                •	Developed custom functions in the M formula language to automate 10+ data cleaning steps in Power Query per dataset<br>
+                •	Taught power query automation using M to coworkers empowering them to program custom data cleaning methods<br>
+                <p></p>
+                <br>
+                <span style="float: right"><b>June 2019 - September 2019</b></span>
+                <span style="float: left"><b>Software Engineer Intern, DoctorDirect</b></span>
+                <p></p>
+                <br>
+                • Responded to patients' inquiries and bridged communications between the Software Engineering team and the users to enhance UI/UX experience. <br>
+                • Detected bugs in an appointment booking software used by 300,000 patients and alerted the programmers of them.<br>
+                <p></p> -->
+            </section>
+
+            <section class="projects" id="projects">
+                <h2 class="section__title section__title--projects">Programming Projects</h2>
+                <div class="projects">
+                    <div class="project">
+                        <h3>Stroke Predictor</h3>
+                        <span class="article__subtitle article__subtitle--project">PolyAI x SEMLA CodeML Hackathon 2022</span>
+                        <span class="article__date article__date--project">October 2022</span>
+                        <div class="article__body">
+                            <p><!--Brief Description-->
+                                •	In a team of 4, developed a linear machine learning model to predict the likelihood of stroke within people<br>
+                                •	Utilized the python packages Pandas, Matplotlib, and TensorFlow to manipulate, clean, and train model<br>
+                                •	Optimized algorithm efficiency using Keras’ Adam Optimizer<br>
+                            </p>
+                            <a href="https://github.com/eli0009/CodeML_project" class="project_item">
+                                <img src="./img/ML_model.png" alt="Machine Learning Project Image" class="project__img">
+                            </a>
+                        </div>
+
+                    </div><!--project-->
+                    <div class="project">
+                        <h3>McGill Class Seat Checker</h3>
+                        <p>
+                            •	Automated the process of going online and checking the number of seats available in every class of a given course (or a set of courses) offered at McGill by using Selenium’s Webdriver to interact with and navigate through a chrome Web browser<br>
+                        </p>
+                    </div><!--project-->
+                    <div class="project">
+                        <h3>Machine Learning Project</h3>
+                        <p></p>
+                    </div><!--project-->
+                </div> <!--projects-->
+
+                <a href="#work" class="btn">My Work</a>
+            </section>
 
         </main>
-        <footer>
 
+        <!-- Footer -->
+        <footer id="contact-info">
+
+            Email: <a href="mailto:eric.huang@mail.mcgill.ca" class="footer__link">eric.huang@mail.mcgill.ca</a>
+            <ul class="social-list">
+                <li class="social-list__item"><a href="https://github.com/erichugy/" class="social-list__link"><img src="./img/GitHub-Mark-64px.png" alt="Github"> </a></li>
+            </ul>
         </footer>
     </div>
 </body>
