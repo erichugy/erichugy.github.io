@@ -68,12 +68,22 @@
 
         <!-- Header -->
         <header class="header">
-            <nav class="navigation-bar">
+            <div class="logo">
+                <img src="./img/logo.png" alt="Logo">
+            </div>
+
+            <!--Note! aria label is like the alt of elements-->
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="buttom-image-maybe"></span>
+            </button>
+            <nav class="nav">
                 <ul class="nav__list">
+                    <li class="nav__item"><a href="#home">Home</a></li>
                     <li class="nav__item"><a href="#about-me">About Me</a></li>
-                    <li class="nav__item"><a href="#projects">Projects</a></li>
+                    <li class="nav__item"><a href="#work">Work Experiences</a></li>
+                    <li class="nav__item"><a href="#projects">Programming Projects</a></li>
                     <li class="nav__item"><a href="#resume">Resume</a></li>
-                    <li class="nav__item"><a href="#contact-info">Contact Info</a></li>
+                    <li class="nav__item"><a href="#contact-info">Contact Information</a></li>
                 </ul>
             </nav>
         </header>
@@ -84,7 +94,7 @@
                 <h1 class="section__title section__title--intro">
                     Hi, I am <strong>Eric Huang</strong>
                 </h1>
-                <p class="section__subtitle section__subtitle--intro">McGill Univeristy Student '25</p>
+                <p class="section__subtitle section__subtitle--intro">McGill Univeristy Student '24</p>
                 <img src="./img/headshot.jpg" alt="Headshot">
 
             </section>
@@ -96,9 +106,9 @@
                 <p class="section__subtitle section__subtitle--about-me"></p>
                 <div class="about-me__body">
                     <p>
-                        Welcome! My name is Eric and I'm a third-year McGil University student
-                        graduating in December 2025. I'm currently majoring in Computer Science but .
-                        I grew up on the West side of Montreal and studied at
+                        Welcome! My name is Eric and I'm a second-year McGil University student
+                        graduating in December 2024. I'm currently majoring in Finance and minoring
+                        in Computer Science. I grew up on the West side of Montreal and studied at
                         John Abbott College in their Honour Sciences program. I am passionate about
                         both business and technology and hope to help make technology accessible to
                         all generations.
