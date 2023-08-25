@@ -1,0 +1,8 @@
+{
+  "baseUrl": "SuiteScripts/DailyKpiDashboard",
+  "paths": {
+    "search_mdl": "Model/search.js",
+    "uc": "Controller/util.js",
+    "cs": "constants.js"
+  }
+}
