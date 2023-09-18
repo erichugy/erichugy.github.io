@@ -1,0 +1,264 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+:root {
+    --ff-primary: "Source Sans Pro", sans-serif;
+    --ff--secondary: "Source Code Pro", monospace;
+
+    --fw-req: 300;
+    --fw-bold: 900;
+
+    --clr-light: #fff;
+    --clr-dark: #303030;
+    --clr-accent: #16e0bd;
+
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+
+    /*color-palate*/
+    --color-1: #336699;
+    --color-2: #F0F0C9;
+    --color-3: #86BBD8;
+    --color-4: #2F4858;
+    --color-5: #786266;
+    --text-font: "Georgia";
+    --title-font: "Times New Roman";
+}
+
+
+@media (min-width: 800px) {
+    :root {
+        --fs-h1: 4.5rem;
+        --fs-h2: 3.75rem;
+        --fs-h3: 1.5rem;
+        --fs-body: 1.125rem;
+    }
+}
+
+strong {
+    font-weight: var(--fw-bold)
+}
+
+/* General Styles */
+
+body {
+    background: var(--clr-light);
+    color: var(--clr-dark);
+    margin: 0;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* TYpography */
+
+h1,
+h2,
+h3 {
+    line-height: 1.1;
+    margin: 0;
+
+}
+
+h1 {
+    font-size: var(--fs-h1)
+}
+
+h2 {
+    font-size: var(--fs-h2)
+}
+
+h3 {
+    font-size: var(--fs-h3)
+}
+
+
+.section__title {
+    margin-bottom: .25em;
+}
+
+.section__title--intro {
+    font-weight: var(--fw-reg);
+}
+
+.section__title--intro strong {
+    display: block;
+}
+
+.section__subtitle {
+    margin: 0;
+    font-size: var(--fs-h3);
+}
+
+.section__subtitle--intro,
+.section__subtitle--about {
+    background: var(--clr-accent);
+    font-family: var(--ff-secondary);
+    margin-bottom: 1em;
+}
+
+
+/* header */
+
+nav {
+    display: none;
+}
+
+/*  Intro section  */
+
+.intro {
+    position: relative;
+}
+
+@media (min-width: 600px) {
+    .intro {
+        display: grid;
+        width: min-content;
+        margin: 0 auto;
+        grid-column-gap: 1em;
+        grid-template-areas:
+            "img title"
+            "img subtitle";
+        grid-template-columns: min-content max-content;
+    }
+
+    .intro__img {
+        grid-area: img;
+        min-width: 250px;
+    }
+}
+
+
+
+
+/* Intro Section */
+
+
+
+/* .wrapper {
+    max-width: 960px;
+    padding-right: 0px;
+    padding-left: 0px;
+} */
+
+
+/* universal selector*/
+/* body {
+    background-image: url("./webpage images/IMG_0110.JPG");
+    background-repeat: no-repeat;
+    font-family: var(--text-font), serif;
+}
+
+.title {
+    color: whitesmoke;
+    font-size: 5rem;
+    font-family: var(--title-font), serif;
+    padding-bottom: 0px;
+}
+
+.subtitle {
+    color: var(--color-3);
+    text-align: center;
+    text-transform: capitalize;
+    width:100%;
+    text-align:center;
+}
+h1 {
+    font-family: var(--title-font), serif;
+}
+
+.navigation-bar {
+    font-size: 5em;
+    font-family: var(--text-font), serif;
+    padding: 14px 16px;
+    margin: 5px;
+    font-weight: 2px;
+    text-decoration: underline;
+    color: var(--dark-slate-gray);
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 5px;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+/* li a:hover:not(.active) {
+    background: linear-gradient(to right, #111,rgba(151, 151, 151, 0.427))
+}
+
+.active {
+    background-color: #04AA6D;
+    text-decoration: underline; */
+/* } */
+/* li a:link{
+
+} */
+
+
+
+/* li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #04AA6D;
+} */
+
+
+/* .navigation-bar {
+
+} */
+
+
+/* body {
+
+}
+head {
+
+} */
+
+
+.sidebar {
+    width: 60px;
+    height: 100%;
+    background-color: #222;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #fff;
+    overflow: hidden;
+    border-radius: 1rem 00 1rem;
+    transition: width .75s ease;
+}
+
+.sidebar:hover {
+    width: 200px
+}
