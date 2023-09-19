@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "react-portfolio-website-1"
+		}
+	],
+	"settings": {
+		"emmet.includeLanguages": {
+			"javascript": "javascriptreact"
+		}
+	}
+}
