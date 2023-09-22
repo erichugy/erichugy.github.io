@@ -78,7 +78,7 @@ const Experience = () => {
         </div>
 
         {/* To do later */}
-        {/* <div className="experience__technologies">
+        <div className="experience__technologies" >
           <h3>Technologies</h3>
           <div className="experience__content">
             <article className="experience__details">
@@ -110,7 +110,7 @@ const Experience = () => {
               </div>
             </article>
           </div>
-        </div> */}
+        </div>
 
 
       </div>
