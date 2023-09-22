@@ -61,7 +61,6 @@ h1 {
 
 section {
   margin-top:8rem;
-  height:100vh;
 }
 
 section > h2, 
@@ -135,8 +134,15 @@ img {
     width:var(--container-width-sm);
   }
 
+  section {
+    margin-top: 3rem;
+  }
+
+  section > h5 {
+    margin-bottom: 0rem;
+  }
   section > h2 {
-    margin-top: 2rem;
+    margin-top: 0.5rem;
   }
 }
 
