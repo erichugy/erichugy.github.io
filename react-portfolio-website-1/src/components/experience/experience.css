@@ -46,6 +46,6 @@
     display: grid;
     grid-column: 1/span 2;
     grid-row: 2 ;
-    margin-left:20rem;
-    margin-right:20rem;
+    margin-left:20vw;
+    margin-right:20vw;
 }
