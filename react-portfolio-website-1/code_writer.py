@@ -86,5 +86,43 @@ def importComponentsToApp(components = [
     update_jsx_file(jsx_file_path, component_names)
  
 
+# Finding code
+
+def find_code_strings(directory= "./node_modules", search_strings= []):
+    if not search_strings: return
+
+    found_locations = []
+
+    # Walk through the directory and its subdirectories
+    for root, _, files in os.walk(directory):
+        for filename in files:
+           
+            file_path = os.path.join(root, filename)
+            with open(file_path, 'r', encoding='utf-8', errors='ignore') as file:
+                lines = file.readlines()
+                for line_number, line in enumerate(lines, start=1):
+                    for search_string in search_strings:
+                        if search_string in line:
+                            found_locations.append((file_path, line_number, line.strip()))
+
+    return found_locations
+
+# Example usage:
+# search_strings = ['search_string_1', 'search_string_2']
+
+# results = find_code_strings(directory_to_search, search_strings)
+
+# for result in results:
+#     file_path, line_number, line = result
+#     print(f"Found in {file_path}, Line {line_number}: {line}")
+
+
+
 if __name__ == "__main__":
-    importComponentsToApp()
+    # importComponentsToApp()
+
+    find_code_strings(search_strings=[
+        "Portfolio"
+    ])
+
+

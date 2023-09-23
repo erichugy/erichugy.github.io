@@ -1,6 +1,9 @@
 {
 	"folders": [
 		{
+			"path": "react-website"
+		},
+		{
 			"path": "react-portfolio-website-1"
 		}
 	],

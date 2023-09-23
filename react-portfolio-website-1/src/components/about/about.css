@@ -23,9 +23,17 @@
     overflow:hidden;
     transform: rotate(10deg);
     transition: var(--transition);
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
 }
+
 .about__me-image:hover{
     transform: rotate(0deg);
+}
+
+.about__me-image > img {
+    object-position: 0% -100%;
 }
 
 .about__cards {
