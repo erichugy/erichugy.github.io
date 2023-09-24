@@ -14,16 +14,16 @@ const Contact = () => {
       <div className="container contact__container">
         <div className="contact__options">
           <article className="contact__option">
-            <MdOutlineEmail />
+            <MdOutlineEmail className="contact__option-icon" />
             <h4>Email</h4>
-            <h5>{email}</h5>
+            {/* <h5>{email}</h5> */}
             <a href={`mailto:${email}`} target='_blank'>Send a message</a>
           </article>
 
           <article className="contact__option">
-            <RiMessengerFill />
+            <RiMessengerFill className="contact__option-icon"/>
             <h4>Messenger</h4>
-            <h5>{email}</h5>
+            {/* <h5>Eric Huang</h5> */}
             <a href="https://m.me/ewic.hugy" target='_blank'>Send a message</a>
           </article>
 
