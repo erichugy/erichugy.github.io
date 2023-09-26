@@ -11,9 +11,11 @@ const portfolioItems = [
   {
     id: 1,
     image: IMG1,
-    title: "Title 1",
-    github: "https://github.com/1",
-    demo: "https://youtube.com/1",
+    title: "Cloud Cloud 9 Gesture Censorship",
+    github: "https://github.com/Simard302/cc9-gesture-censorship",
+    page: "video-censor.codecloud9.dev/index",
+    demo: "https://www.youtube.com/watch?v=8joYMFchrZo&ab_channel=AdamSimard",
+    description:"Using AI to censor derogatory hand signs in videos"
   },
   {
     id: 2,
@@ -39,7 +41,7 @@ const Portfolio = () => {
 
       <div className="container portfolio__container">
         {
-          portfolioItems.map(({id, image, title, github, demo}) => {
+          portfolioItems.map(({ id, image, title, github, demo, page, description }) => {
             return (
               <article key={id} className="portfolio__item">
                 <div className="portfolio__item-image">
@@ -48,7 +50,14 @@ const Portfolio = () => {
                 <h3>{title}</h3>
                 <div className="portfolio__item-cta">
                   <a href={github} className='btn' target='_blank'>GitHub</a>
-                  <a href={demo} className='btn btn-primary' target='_blank'>Live Demo</a> {/* Don't need this */}
+                  
+                  {/* Don't need this */}
+                  {demo ? ( 
+                  <a href={demo} className='btn btn-primary' target='_blank'>Live Demo</a> 
+                  ) : null}
+                  {page ? (
+                    <a href={page} className="btn secondary-btn" target="_blank">Web Page (in progress)</a>
+                  ) : null}
                 </div>
               </article>
             );

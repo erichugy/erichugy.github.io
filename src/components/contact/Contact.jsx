@@ -6,12 +6,8 @@ import emailjs from 'emailjs-com'
 
 const email = "fireshot2002@gmail.com";
 
-
-
 const Contact = () => {
-
   const form = useRef();
-
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -21,7 +17,6 @@ const Contact = () => {
       }, (error) => {
           console.log(error.text);
       });
-
 
       e.target.reset() // change this to change submit button to submitted
   };
