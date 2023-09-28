@@ -11,7 +11,7 @@ const portfolioItems = [
   {
     id: 1,
     image: IMG1,
-    title: "Cloud Cloud 9 Gesture Censorship",
+    title: "CC9 - Gesture Censorship",
     github: "https://github.com/Simard302/cc9-gesture-censorship",
     page: "video-censor.codecloud9.dev/index",
     demo: "https://www.youtube.com/watch?v=8joYMFchrZo&ab_channel=AdamSimard",
@@ -55,9 +55,9 @@ const Portfolio = () => {
                   {demo ? ( 
                   <a href={demo} className='btn btn-primary' target='_blank'>Live Demo</a> 
                   ) : null}
-                  {page ? (
+                  {/* {page ? (
                     <a href={page} className="btn secondary-btn" target="_blank">Web Page (in progress)</a>
-                  ) : null}
+                  ) : null} */}
                 </div>
               </article>
             );
