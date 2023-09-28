@@ -1,8 +1,8 @@
 import "./portfolio.css";
 import React from "react";
-import IMG1 from "../../assets/portfolio1.jpg"
-import IMG2 from "../../assets/portfolio2.jpg"
-import IMG3 from "../../assets/portfolio3.jpg"
+import IMG1 from "../../assets/cc9-censorship.png"
+import IMG2 from "../../assets/trading-bot.png"
+import IMG3 from "../../assets/trading-bot.png"
 // import IMG1 from "../../assets/portfolio1.jpg"
 // import IMG1 from "../../assets/portfolio1.jpg"
 
@@ -13,22 +13,23 @@ const portfolioItems = [
     image: IMG1,
     title: "CC9 - Gesture Censorship",
     github: "https://github.com/Simard302/cc9-gesture-censorship",
-    page: "video-censor.codecloud9.dev/index",
     demo: "https://www.youtube.com/watch?v=8joYMFchrZo&ab_channel=AdamSimard",
-    description:"Using AI to censor derogatory hand signs in videos"
+    page: "video-censor.codecloud9.dev/index", 
+    description:"Using AI vision to censor derogatory hand signs in videos"
   },
   {
     id: 2,
     image: IMG2,
-    title: "Title 2",
-    github: "https://github.com/2",
-    demo: "https://youtube.com/2",
+    title: "Trading Bot",
+    github: "https://github.com/eli0009/McHacks10-trading-bot",
+    demo: "",
+    description:"Analyses recent news articles using natural language processing to tell you the current market sentiment of a given public security."
   },
   {
     id: 3,
     image: IMG3,
     title: "Title 3",
-    github: "https://github.com/3",
+    github: "",
     demo: "https://youtube.com/3",
   },
 ];
@@ -55,10 +56,18 @@ const Portfolio = () => {
                   {demo ? ( 
                   <a href={demo} className='btn btn-primary' target='_blank'>Live Demo</a> 
                   ) : null}
+
                   {/* {page ? (
                     <a href={page} className="btn secondary-btn" target="_blank">Web Page (in progress)</a>
                   ) : null} */}
+
+                  
+
                 </div>
+                
+                { description ? (
+                  <p className="description__porfolio">{description}</p> 
+                ) : null }
               </article>
             );
           })

@@ -10,6 +10,7 @@
     border-radius: 2rem;
     border: 1px solid transparent;
     transition: var(--transition);
+    min-width: 10rem;
 }
 
 .portfolio__item:hover {
@@ -29,12 +30,23 @@
 
 .portfolio__item-cta{
     display: flex;
+    /* flex-wrap: wrap; */ /*if you have more than two CTA buttons */
     gap: 1rem;
     margin-bottom: 1rem;
     justify-content: center;
 }
 
+.portfolio__item > p {
+    width: 80%;
+    text-align: center;
+    margin: auto 10%;
+    vertical-align: middle;
+}
 
+.btn,
+.btn-primary {
+    text-align: center;
+}
 
 /* --- Media Queries (Medium Devices) --- */
 
