@@ -15,7 +15,7 @@ const portfolioItems = [
     github: "https://github.com/Simard302/cc9-gesture-censorship",
     demo: "https://www.youtube.com/watch?v=8joYMFchrZo&ab_channel=AdamSimard",
     page: "video-censor.codecloud9.dev/index", 
-    description:"Using AI vision to censor derogatory hand signs in videos"
+    description:"Using AI vision to censor derogatory hand signs in videos."
   },
   {
     id: 2,
