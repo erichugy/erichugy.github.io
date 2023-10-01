@@ -1,12 +1,26 @@
+// Copyright (c) 2023, Eric Huang
+// All rights reserved.
+
+// This source code is licensed under the BSD-style license found in the
+// LICENSE file in the root directory of this source tree. 
+
 import React from 'react'
 import './about.css'
 import ME from '../../assets/about-me.jpg'
-import {FaAward} from 'react-icons/fa'
-import {BiLibrary} from 'react-icons/bi'
-import {FiUsers} from 'react-icons/fi'
+import { FaAward } from 'react-icons/fa'
+import { BiLibrary } from 'react-icons/bi'
+import { FiUsers } from 'react-icons/fi'
 import constants from "../../utils/constants.json"
 
 const About = () => {
+  // Get the current date
+  const currentDate = new Date();
+
+  // Extract the current year from the date
+  const currentYear = currentDate.getFullYear();
+
+  const yearsOfExperience = currentYear - constants['first-programming-year']
+
   return (
     <section id='about'>
       <h5>Get to Know</h5>
@@ -15,27 +29,27 @@ const About = () => {
       <div className="container about__container">
         <div className="about__me">
           <div className="about__me-image">
-            <img src={ME} alt="About Image"/>
+            <img src={ME} alt="About Image" />
           </div>
         </div>
 
         <div className="about__content">
           <div className="about__cards">
             <article className='about__card'>
-              <FaAward className='about__icon'/>
+              <FaAward className='about__icon' />
               <h5>Experience in Programming</h5>
-              <small>2+ Years</small>
+              <small>{yearsOfExperience}+ Years</small>
             </article>
-            
+
             <article className='about__card'>
-              <BiLibrary className='about__icon'/>
+              <BiLibrary className='about__icon' />
               <a href="#portfolio"><h5>Projects</h5></a>
               <small>5+ projects</small>
             </article>
-            
+
             {/* To do later */}
             <article className='about__card merge__card'>
-              <FiUsers className='about__icon'/>
+              <FiUsers className='about__icon' />
               <h5>Volunteering Work</h5>
               <small>Currently part of 2 incredible clubs</small>
             </article>

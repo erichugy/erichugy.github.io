@@ -1,3 +1,9 @@
+/* Copyright (c) 2023, Eric Huang
+All rights reserved.
+
+This source code is licensed under the BSD-style license found in the
+LICENSE file in the root directory of this source tree.  */
+
 header {
   height: 100vh;
   min-height: 854px;
@@ -11,7 +17,6 @@ header {
   height: 100%;
   position: relative;
 }
-
 
 /* --- CTA --- */
 .cta {
@@ -34,7 +39,7 @@ header {
 }
 
 .header__socials::after {
-  content: '';
+  content: "";
   width: 1px;
   height: 2rem;
   background: var(--color-primary);

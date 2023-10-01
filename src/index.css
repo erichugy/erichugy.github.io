@@ -1,3 +1,8 @@
+/* Copyright (c) 2023, Eric Huang
+All rights reserved.
+
+This source code is licensed under the BSD-style license found in the
+LICENSE file in the root directory of this source tree.  */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
 * {
@@ -150,8 +155,7 @@ img {
     background: var(--color-white);
     color: var(--color-bg);
     border-color: transparent;
-    transition: background 2ms, color 2ms,
-      border-color 2ms;
+    transition: background 2ms, color 2ms, border-color 2ms;
 
     background: var(--color-primary);
     color: var(--color-bg);

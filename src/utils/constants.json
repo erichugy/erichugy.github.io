@@ -1,11 +1,9 @@
 {
+  "License": "Copyright (c) 2023, Eric Huang. All rights reserved. This source code is licensed under the BSD-style license found in the LICENSE file in the root directory of this source tree. ",
   "email": "ehugy.business@gmail.com",
-  "programming-year": 2023,
+  "first-programming-year": 2021,
   "github": "https://github.com/erichugy",
   "linkedin": "https://www.linkedin.com/in/erichugy/",
-
-
-
   "experience__frontend": [
     {
       "tech": "HTML",
@@ -42,8 +40,4 @@
       "lvl": "intermediate"
     }
   ]
-
-
-
-  
 }

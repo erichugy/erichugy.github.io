@@ -1,10 +1,17 @@
+// Copyright (c) 2023, Eric Huang
+// All rights reserved.
+
+// This source code is licensed under the BSD-style license found in the
+// LICENSE file in the root directory of this source tree. 
+
 import React, {useRef} from "react";
 import "./contact.css";
 import { MdOutlineEmail } from "react-icons/md";
 import { RiMessengerFill } from "react-icons/ri"
 import emailjs from 'emailjs-com'
+import constants from "../../utils/constants.json"
 
-const email = "fireshot2002@gmail.com";
+
 
 const Contact = () => {
   const form = useRef();
@@ -32,7 +39,7 @@ const Contact = () => {
             <MdOutlineEmail className="contact__option-icon" />
             <h4>Email</h4>
             {/* <h5>{email}</h5> */}
-            <a href={`mailto:${email}`} target='_blank'>Send a message</a>
+            <a href={`mailto:${constants.email}`} target='_blank'>Send a message</a>
           </article>
 
           <article className="contact__option">

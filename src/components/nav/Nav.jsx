@@ -1,3 +1,9 @@
+// Copyright (c) 2023, Eric Huang
+// All rights reserved.
+
+// This source code is licensed under the BSD-style license found in the
+// LICENSE file in the root directory of this source tree. 
+
 import React from 'react'
 import './nav.css'
 import { AiOutlineHome } from 'react-icons/ai'
@@ -5,16 +11,13 @@ import { AiOutlineUser } from 'react-icons/ai'
 import { BiBook } from 'react-icons/bi'
 import { BiCustomize } from 'react-icons/bi'
 import { BiChat } from 'react-icons/bi'
-import {FiUsers} from 'react-icons/fi'
-
+import { FiUsers } from 'react-icons/fi'
 import { useState } from 'react'
-
-
 
 const Nav = () => {
   const [activeNav, setActiveNav] = useState('#');
 
-   // Function to handle hover events and update activeNav
+  // Function to handle hover events and update activeNav
   const handleHover = (navItem) => { setActiveNav(navItem); };
 
   return (

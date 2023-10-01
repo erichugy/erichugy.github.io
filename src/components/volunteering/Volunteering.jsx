@@ -1,12 +1,15 @@
+// Copyright (c) 2023, Eric Huang
+// All rights reserved.
+
+// This source code is licensed under the BSD-style license found in the
+// LICENSE file in the root directory of this source tree. 
 import "../volunteering/volunteering.css"
 import React from "react";
 import IMG1 from "../../assets/gdsc-mcgill.png"
 import IMG2 from "../../assets/bolt-resized.png"
-import IMG3 from "../../assets/trading-bot.png"
-// import IMG1 from "../../assets/portfolio1.jpg"
-// import IMG1 from "../../assets/portfolio1.jpg"
 
-import {FaExternalLinkAlt} from 'react-icons/fa'
+
+import { FaExternalLinkAlt } from 'react-icons/fa'
 
 
 const portfolioItems = [
@@ -16,7 +19,7 @@ const portfolioItems = [
     title: "Google Developer Student Clubs McGill",
     instagram: "https://www.instagram.com/gdscmcgill/",
     linktree: "https://linktr.ee/gdscmcgill",
-    description:"Student lead community supported by Google for Developers Montreal. By joining GDSC McGill, students grow their knowledge in a peer-to-peer learning environment and create projects to apply their skills to advance their careers."
+    description: "Student lead community supported by Google for Developers Montreal. By joining GDSC McGill, students grow their knowledge in a peer-to-peer learning environment and create projects to apply their skills to advance their careers."
   },
   {
     id: 2,
@@ -24,7 +27,7 @@ const portfolioItems = [
     title: "BOLT Bootcamps McGill",
     instagram: "https://www.instagram.com/gdscmcgill/",
     linktree: "https://linktr.ee/boltbootcamps",
-    description:"BOLT Bootcamps is a hub of innovation, fostering collaboration between business and STEM talent, enriching the community with workshops and events designed to empower and inspire future leaders in various fields."
+    description: "BOLT Bootcamps is a hub of innovation, fostering collaboration between business and STEM talent, enriching the community with workshops and events designed to empower and inspire future leaders in various fields."
   },
   // {
   //   id: 3,
@@ -51,14 +54,14 @@ const Volunteering = () => {
                   <img src={image} alt={title} />
                 </div>
                 <h3>{title}</h3>
-                
-                { description ? (
-                  <p className="description__porfolio">{description}</p> 
-                ) : null }
+
+                {description ? (
+                  <p className="description__porfolio">{description}</p>
+                ) : null}
 
                 <div className="portfolio__item-cta">
-                  {instagram ? ( 
-                    <a href={instagram} className="logo__link" target='_blank'><FaExternalLinkAlt/></a> 
+                  {instagram ? (
+                    <a href={instagram} className="logo__link" target='_blank'><FaExternalLinkAlt /></a>
                   ) : null}
                 </div>
               </article>

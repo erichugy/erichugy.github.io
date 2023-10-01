@@ -1,10 +1,14 @@
+// Copyright (c) 2023, Eric Huang
+// All rights reserved.
+
+// This source code is licensed under the BSD-style license found in the
+// LICENSE file in the root directory of this source tree. 
+
 import "./portfolio.css";
 import React from "react";
 import IMG1 from "../../assets/cc9-censorship.png"
 import IMG2 from "../../assets/email-sender.png"
 import IMG3 from "../../assets/trading-bot-resized.png"
-// import IMG1 from "../../assets/portfolio1.jpg"
-// import IMG1 from "../../assets/portfolio1.jpg"
 
 
 const portfolioItems = [

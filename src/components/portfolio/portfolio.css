@@ -1,3 +1,9 @@
+/* Copyright (c) 2023, Eric Huang
+All rights reserved.
+
+This source code is licensed under the BSD-style license found in the
+LICENSE file in the root directory of this source tree.  */
+
 .portfolio__container {
   display: grid;
   min-width: 320px;
@@ -39,7 +45,7 @@
   justify-content: center;
 }
 
-.portfolio__item>p {
+.portfolio__item > p {
   width: 80%;
   text-align: center;
   margin: auto 10%;
@@ -62,7 +68,8 @@
   .portfolio__item:hover {
     border-color: var(--color-primary-variant);
     background: transparent;
-    transition: border-color var(--transition-fast), background var(--transition-fast);
+    transition: border-color var(--transition-fast),
+      background var(--transition-fast);
   }
 }
 
