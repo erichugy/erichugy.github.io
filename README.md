@@ -2,8 +2,6 @@
 
 Welcome to my personal website! This is where you can learn more about me, my projects, and get in touch. Feel free to explore and reach out if you have any questions or collaboration ideas.
 
-
-
 ## About Me
 
 I'm passionate about leveraging technology to solve real-world problems and thrive in collaborative environments. Let's connect and explore opportunities to innovate and make a positive impact! 🚀
