@@ -66,12 +66,20 @@ textarea {
   color: var(--color-white);
 }
 
+
+
+
 /* --- Media Queries (Medium Devices) --- */
 
 @media screen and (max-width: 1024px) {
   .container.contact__container {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+
+  button {
+      display: block;
+      margin: 0 auto; /* Center the button horizontally */
   }
 }
 
