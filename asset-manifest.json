@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.75784922.css",
-    "main.js": "/static/js/main.9704db26.js",
+    "main.css": "/static/css/main.b8fdf5fc.css",
+    "main.js": "/static/js/main.8e885fce.js",
     "static/media/about-me.jpg": "/static/media/about-me.0e96166859a0f20bbca4.jpg",
     "static/media/polyai-stroke.png": "/static/media/polyai-stroke.412eb199ece821ece512.png",
     "static/media/trading-bot-resized.png": "/static/media/trading-bot-resized.f17c4e694be8195838dd.png",
@@ -12,11 +12,11 @@
     "static/media/cc9-censorship.png": "/static/media/cc9-censorship.a0a99a473643d5b9a413.png",
     "static/media/cv.pdf": "/static/media/cv.7e0df7ca9c73a873bd33.pdf",
     "index.html": "/index.html",
-    "main.75784922.css.map": "/static/css/main.75784922.css.map",
-    "main.9704db26.js.map": "/static/js/main.9704db26.js.map"
+    "main.b8fdf5fc.css.map": "/static/css/main.b8fdf5fc.css.map",
+    "main.8e885fce.js.map": "/static/js/main.8e885fce.js.map"
   },
   "entrypoints": [
-    "static/css/main.75784922.css",
-    "static/js/main.9704db26.js"
+    "static/css/main.b8fdf5fc.css",
+    "static/js/main.8e885fce.js"
   ]
 }
