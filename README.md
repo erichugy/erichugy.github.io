@@ -1,6 +1,6 @@
 # Eric Huang's Personal Website
 
-Welcome to my personal website! This is where you can learn more about me, my projects, and get in touch. Feel free to explore and reach out if you have any questions or collaboration ideas.
+Welcome to my personal website! This is where you can learn more about me, my projects, and get in touch. Feel free to explore and reach out if you have any questions or collaboration ideas. Check out my page at https://erichugy.github.io/
 
 ## About Me
 
