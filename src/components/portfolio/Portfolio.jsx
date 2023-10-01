@@ -9,6 +9,8 @@ import React from "react";
 import IMG1 from "../../assets/cc9-censorship.png"
 import IMG2 from "../../assets/email-sender.png"
 import IMG3 from "../../assets/trading-bot-resized.png"
+import IMG4 from "../../assets/polyai-stroke.png"
+
 
 
 const portfolioItems = [
@@ -27,7 +29,7 @@ const portfolioItems = [
     title: "Automatic Email Sender",
     github: "https://github.com/erichugy/Email-Sender",
     demo: "",
-    description:"Automatically send out word documents to all contacts listed in an emailing list."
+    description:"Automatically sends out word documents to all contacts listed in an emailing list. Used to send out emails to my mailing list."
 
   },
   {
@@ -36,7 +38,15 @@ const portfolioItems = [
     title: "Trading Bot",
     github: "https://github.com/eli0009/McHacks10-trading-bot",
     demo: "",
-    description:"Analyses recent news articles using natural language processing to tell you the current market sentiment of a given public security."
+    description:"Analyzes up-to-date news articles to provide recommendations (buy, hold, or sell) for publicly traded stocks based on the prevailing market sentiment."
+  },
+  {
+    id: 4,
+    image: IMG4,
+    title: "Stroke Predictor",
+    github: "https://github.com/eli0009/CodeML_project",
+    demo: "",
+    description:"AI Model trained to predict the likelyhood that someone has a stroke. Created with Tensorflow for the 2022 PolyAI Hackathon. Placed 7th in our category."
   },
 ];
 
