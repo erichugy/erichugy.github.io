@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.b8fdf5fc.css",
+    "main.css": "/static/css/main.3d903d41.css",
     "main.js": "/static/js/main.8e885fce.js",
     "static/media/about-me.jpg": "/static/media/about-me.0e96166859a0f20bbca4.jpg",
     "static/media/polyai-stroke.png": "/static/media/polyai-stroke.412eb199ece821ece512.png",
@@ -12,11 +12,11 @@
     "static/media/cc9-censorship.png": "/static/media/cc9-censorship.a0a99a473643d5b9a413.png",
     "static/media/cv.pdf": "/static/media/cv.7e0df7ca9c73a873bd33.pdf",
     "index.html": "/index.html",
-    "main.b8fdf5fc.css.map": "/static/css/main.b8fdf5fc.css.map",
+    "main.3d903d41.css.map": "/static/css/main.3d903d41.css.map",
     "main.8e885fce.js.map": "/static/js/main.8e885fce.js.map"
   },
   "entrypoints": [
-    "static/css/main.b8fdf5fc.css",
+    "static/css/main.3d903d41.css",
     "static/js/main.8e885fce.js"
   ]
 }
