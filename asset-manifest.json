@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/erichuangportfolio/static/css/main.75784922.css",
+    "main.js": "/erichuangportfolio/static/js/main.f8054148.js",
+    "static/media/about-me.jpg": "/erichuangportfolio/static/media/about-me.0e96166859a0f20bbca4.jpg",
+    "static/media/email-sender.png": "/erichuangportfolio/static/media/email-sender.fe8f772145a3a039ca0e.png",
+    "static/media/me.png": "/erichuangportfolio/static/media/me.4a732d5284981902c17f.png",
+    "static/media/bolt-resized.png": "/erichuangportfolio/static/media/bolt-resized.b863624113f190540086.png",
+    "static/media/trading-bot.png": "/erichuangportfolio/static/media/trading-bot.e397f690da87a2dceadc.png",
+    "static/media/gdsc-mcgill.png": "/erichuangportfolio/static/media/gdsc-mcgill.150303e7878a79153552.png",
+    "static/media/trading-bot-resized.png": "/erichuangportfolio/static/media/trading-bot-resized.77de64389e910beec7ac.png",
+    "static/media/cc9-censorship.png": "/erichuangportfolio/static/media/cc9-censorship.a0a99a473643d5b9a413.png",
+    "static/media/cv.pdf": "/erichuangportfolio/static/media/cv.2a045043cf2eb327f3d4.pdf",
+    "index.html": "/erichuangportfolio/index.html",
+    "main.75784922.css.map": "/erichuangportfolio/static/css/main.75784922.css.map",
+    "main.f8054148.js.map": "/erichuangportfolio/static/js/main.f8054148.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.75784922.css",
+    "static/js/main.f8054148.js"
+  ]
+}
