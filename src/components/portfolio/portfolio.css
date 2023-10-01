@@ -8,7 +8,7 @@ LICENSE file in the root directory of this source tree.  */
   display: grid;
   min-width: 320px;
 
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 2.5rem;
 }
 
