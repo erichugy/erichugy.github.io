@@ -1,0 +1,18 @@
+@import "../portfolio/portfolio.css";
+
+.portfolio__container {
+    display: grid;
+    min-width: 320px;
+  
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+
+.logo__link {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-top: 1rem;
+    color: var(--color-white);
+    display: inline-block;
+}
+

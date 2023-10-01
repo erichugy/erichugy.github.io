@@ -1,5 +1,49 @@
 {
-    "email": "ehugy.business@gmail.com",
-    "programming-year":2023
+  "email": "ehugy.business@gmail.com",
+  "programming-year": 2023,
+  "github": "https://github.com/erichugy",
+  "linkedin": "https://www.linkedin.com/in/erichugy/",
 
+
+
+  "experience__frontend": [
+    {
+      "tech": "HTML",
+      "lvl": "intermediate"
+    },
+    {
+      "tech": "CSS",
+      "lvl": "intermediate"
+    },
+    {
+      "tech": "Javascript",
+      "lvl": "intermediate"
+    },
+    {
+      "tech": "React",
+      "lvl": "basic"
+    }
+  ],
+  "experience__backend": [
+    {
+      "tech": "Python",
+      "lvl": "intermediate"
+    },
+    {
+      "tech": "Java",
+      "lvl": "intermediate"
+    },
+    {
+      "tech": "C",
+      "lvl": "basic"
+    },
+    {
+      "tech": "R",
+      "lvl": "intermediate"
+    }
+  ]
+
+
+
+  
 }

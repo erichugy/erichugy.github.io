@@ -1,67 +1,76 @@
 .portfolio__container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2.5rem;
+  display: grid;
+  min-width: 320px;
+
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
 }
 
 .portfolio__item {
-    background: var(--color-bg-variant);
-    padding: 1.2rem;
-    border-radius: 2rem;
-    border: 1px solid transparent;
-    transition: var(--transition);
-    min-width: 10rem;
+  background: var(--color-bg-variant);
+  padding: 1.2rem;
+  border-radius: 2rem;
+  border: 1px solid transparent;
+  transition: var(--transition);
+  min-width: 10rem;
 }
 
 .portfolio__item:hover {
-    border-color: var(--color-primary-variant);
-    background: transparent;
+  border-color: var(--color-primary-variant);
+  background: transparent;
 }
 
 .portfolio__item-image {
-    border-radius: 1.5rem;
-    overflow: hidden;
+  border-radius: 1.5rem;
+  overflow: hidden;
 }
 
 .portfolio__item h3 {
-    margin: 1.2rem 0 2rem;
-    text-align: center;
+  margin: 1.2rem 0 2rem;
+  text-align: center;
 }
 
-.portfolio__item-cta{
-    display: flex;
-    /* flex-wrap: wrap; */ /*if you have more than two CTA buttons */
-    gap: 1rem;
-    margin-bottom: 1rem;
-    justify-content: center;
+.portfolio__item-cta {
+  display: flex;
+  /* flex-wrap: wrap; */
+  /*if you have more than two CTA buttons */
+  gap: 1rem;
+  margin-bottom: 1rem;
+  justify-content: center;
 }
 
-.portfolio__item > p {
-    width: 80%;
-    text-align: center;
-    margin: auto 10%;
-    vertical-align: middle;
+.portfolio__item>p {
+  width: 80%;
+  text-align: center;
+  margin: auto 10%;
+  vertical-align: middle;
 }
 
 .btn,
 .btn-primary {
-    text-align: center;
+  text-align: center;
 }
 
 /* --- Media Queries (Medium Devices) --- */
 
 @media screen and (max-width: 1024px) {
-    .portfolio__container {
-        grid-template-columns: 1fr 1fr;
-        gap: 1.2rem;
-    }
+  .portfolio__container {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
   }
-  
-  /* --- Media Queries (Small Devices) --- */
-  
-  @media screen and (max-width: 600px) {
-    .portfolio__container{
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
+
+  .portfolio__item:hover {
+    border-color: var(--color-primary-variant);
+    background: transparent;
+    transition: border-color var(--transition-fast), background var(--transition-fast);
   }
+}
+
+/* --- Media Queries (Small Devices) --- */
+
+@media screen and (max-width: 600px) {
+  .portfolio__container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
