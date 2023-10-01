@@ -6,7 +6,7 @@ LICENSE file in the root directory of this source tree.  */
 
 @import "../portfolio/portfolio.css";
 
-.portfolio__container {
+.volunteering__container {
   display: grid;
   min-width: 320px;
 
@@ -20,4 +20,20 @@ LICENSE file in the root directory of this source tree.  */
   margin-top: 1rem;
   color: var(--color-white);
   display: inline-block;
+}
+
+
+@media screen and (max-width: 1024px) {
+  .volunteering__container {
+    gap: 1.2rem;
+  }
+}
+
+/* --- Media Queries (Small Devices) --- */
+
+@media screen and (max-width: 600px) {
+  .volunteering__container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
 }

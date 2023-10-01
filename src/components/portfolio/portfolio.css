@@ -70,6 +70,10 @@ LICENSE file in the root directory of this source tree.  */
     background: transparent;
     transition: border-color var(--transition-fast),
       background var(--transition-fast);
+    background: var(--color-bg-variant);
+    border: 1px solid transparent;
+    transition: border-color var(--transition-fast),
+      background var(--transition-fast);
   }
 }
 

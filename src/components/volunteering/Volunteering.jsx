@@ -45,7 +45,7 @@ const Volunteering = () => {
       <h5>Clubs & Activities</h5>
       <h2>Volunteering</h2>
 
-      <div className="container portfolio__container">
+      <div className="container portfolio__container volunteering__container">
         {
           portfolioItems.map(({ id, image, title, instagram, description }) => {
             return (
