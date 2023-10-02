@@ -71,7 +71,7 @@ const Portfolio = () => {
                   {/* Don't need this */}
                   {demo ? ( 
                   <a href={demo} className='btn btn-primary' target='_blank'>Live Demo</a> 
-                  ) : <a href="" className='btn btn-primary' target='_blank'><i>&#40;No Demo Yet&#41;</i></a>}
+                  ) : <a href="#portfolio" className='btn btn-primary' target='_blank'><i>&#40;No Demo Yet&#41;</i></a>}
 
                   {/* {page ? (
                     <a href={page} className="btn secondary-btn" target="_blank">Web Page (in progress)</a>

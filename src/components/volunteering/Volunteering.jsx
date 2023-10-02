@@ -29,14 +29,6 @@ const portfolioItems = [
     linktree: "https://linktr.ee/boltbootcamps",
     description: "BOLT Bootcamps is a hub of innovation, fostering collaboration between business and STEM talent, enriching the community with workshops and events designed to empower and inspire future leaders in various fields."
   },
-  // {
-  //   id: 3,
-  //   image: IMG3,
-  //   title: "Google Developer Student Clubs",
-  //   instagram: "https://www.instagram.com/gdscmcgill/",
-  //   linktree: "https://linktr.ee/gdscmcgill",
-  //   description:"The McGill University chapter of Google Developer Student Clubs (GDSC) is a student lead community supported by Google for Developers. By joining GDSC McGill, students grow their knowledge in a peer-to-peer learning environment and create projects to apply their skills to advance their careers."
-  // },
 ];
 
 const Volunteering = () => {
