@@ -37,7 +37,7 @@ const portfolioItems = [
     image: IMG3,
     title: "Trading Bot",
     github: "https://github.com/eli0009/McHacks10-trading-bot",
-    demo: "",
+    demo: "https://youtu.be/ydx3FlGZKYU",
     description:"Analyzes up-to-date news articles to provide recommendations (buy, hold, or sell) for publicly traded stocks based on the prevailing market sentiment."
   },
   {
