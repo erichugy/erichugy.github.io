@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.ef5a034e.css",
-    "main.js": "/static/js/main.cfddb024.js",
+    "main.js": "/static/js/main.b2e48491.js",
     "static/media/about-me.jpg": "/static/media/about-me.0e96166859a0f20bbca4.jpg",
     "static/media/polyai-stroke.png": "/static/media/polyai-stroke.412eb199ece821ece512.png",
     "static/media/trading-bot-resized.png": "/static/media/trading-bot-resized.f17c4e694be8195838dd.png",
@@ -10,13 +10,13 @@
     "static/media/bolt-resized.png": "/static/media/bolt-resized.b863624113f190540086.png",
     "static/media/gdsc-mcgill.png": "/static/media/gdsc-mcgill.150303e7878a79153552.png",
     "static/media/cc9-censorship.png": "/static/media/cc9-censorship.a0a99a473643d5b9a413.png",
-    "static/media/cv.pdf": "/static/media/cv.7e0df7ca9c73a873bd33.pdf",
+    "static/media/cv.pdf": "/static/media/cv.1ea8225991f62ae85d72.pdf",
     "index.html": "/index.html",
     "main.ef5a034e.css.map": "/static/css/main.ef5a034e.css.map",
-    "main.cfddb024.js.map": "/static/js/main.cfddb024.js.map"
+    "main.b2e48491.js.map": "/static/js/main.b2e48491.js.map"
   },
   "entrypoints": [
     "static/css/main.ef5a034e.css",
-    "static/js/main.cfddb024.js"
+    "static/js/main.b2e48491.js"
   ]
 }
