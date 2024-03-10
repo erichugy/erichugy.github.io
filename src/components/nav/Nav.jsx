@@ -20,6 +20,7 @@ const Nav = () => {
   // Function to handle hover events and update activeNav
   const handleHover = (navItem) => { setActiveNav(navItem); };
 
+
   return (
 
     <nav>
@@ -77,11 +78,16 @@ const Nav = () => {
 
 // Create a separate NavItem component for each navigation item
 const NavItem = ({ navItem, icon, active, handleHover }) => {
+  const handleMouseLeave = () => {
+    handleHover(null); // Set to null or '' depending on your default state
+  };
+  
   return (
     <a
       href={navItem}
       className={active ? 'active' : ''}
       onMouseEnter={() => handleHover(navItem)} // Trigger hover event
+      onMouseLeave={handleMouseLeave}
     >
       {icon}
     </a>
