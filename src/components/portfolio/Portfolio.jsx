@@ -6,11 +6,10 @@
 
 import "./portfolio.css";
 import React from "react";
-import IMG1 from "../../assets/cc9-censorship.png"
-import IMG2 from "../../assets/email-sender.png"
-import IMG3 from "../../assets/trading-bot-resized.png"
-import IMG4 from "../../assets/polyai-stroke.png"
-
+import IMG1 from "../../assets/cc9-censorship.png";
+import IMG2 from "../../assets/email-sender.png";
+import IMG3 from "../../assets/trading-bot-resized.png";
+import IMG4 from "../../assets/polyai-stroke.png";
 
 
 const portfolioItems = [

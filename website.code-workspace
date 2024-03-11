@@ -7,5 +7,10 @@
 			"path": "../Hackathons/GoogleVertexAIHackathon"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"emmet.includeLanguages": {
+				"javascript": "javascriptreact"
+		},
+		"editor.tabSize": 2
+}
 }

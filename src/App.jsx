@@ -3,29 +3,24 @@
 
 // This source code is licensed under the BSD-style license found in the
 // LICENSE file in the root directory of this source tree. 
-import React from 'react'
-import Header from './components/header/Header'
-import Nav from './components/nav/Nav'
-import About from './components/about/About'
-import Experience from './components/experience/Experience'
-import Portfolio from './components/portfolio/Portfolio'
-import Volunteering from './components/volunteering/Volunteering'
-import Contact from './components/contact/Contact'
-import Footer from './components/footer/Footer'
+import React from 'react';
+import Home from './components/home/Home';
+import HiddenDocuments from './components/hiddenDocuments/HiddenDocuments';
+import Footer from './components/footer/Footer';
+import TestingPage from './components/testingPage/TestingPage';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 const App = () => {
   return (
-    <>
-      <Header />
-      <Nav />
-      <About />
-      <Experience />
-      <Portfolio />
-      <Volunteering/>
-      <Contact />
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/documents" element={<HiddenDocuments />} />
+        <Route path="/test-page" element={<TestingPage />} />
+      </Routes>
       <Footer />
-    </>
-  )
+    </Router>
+  );
 }
 
-export default App
+export default App;

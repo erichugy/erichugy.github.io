@@ -4,15 +4,15 @@
 // This source code is licensed under the BSD-style license found in the
 // LICENSE file in the root directory of this source tree. 
 
-import React from 'react'
-import './nav.css'
-import { AiOutlineHome } from 'react-icons/ai'
-import { AiOutlineUser } from 'react-icons/ai'
-import { BiBook } from 'react-icons/bi'
-import { BiCustomize } from 'react-icons/bi'
-import { BiChat } from 'react-icons/bi'
-import { FiUsers } from 'react-icons/fi'
-import { useState } from 'react'
+import React from 'react';
+import './nav.css';
+import { AiOutlineHome } from 'react-icons/ai';
+import { AiOutlineUser } from 'react-icons/ai';
+import { BiBook } from 'react-icons/bi';
+import { BiCustomize } from 'react-icons/bi';
+import { BiChat } from 'react-icons/bi';
+import { FiUsers } from 'react-icons/fi';
+import { useState } from 'react';
 
 const Nav = () => {
   const [activeNav, setActiveNav] = useState('#');
@@ -61,17 +61,6 @@ const Nav = () => {
         handleHover={handleHover}
       />
     </nav>
-
-
-    // <nav>
-    //   <a href="#" className={activeNav === '#' ? 'active' : ''} onClick={() => setActiveNav('#')}><AiOutlineHome /></a>
-    //   <a href="#about" className={activeNav === '#about' ? 'active' : ''} onClick={() => setActiveNav('#about')}><AiOutlineUser /></a>
-    //   <a href="#experience" className={activeNav === '#experience' ? 'active' : ''} onClick={() => setActiveNav('#experience')}><BiBook /></a>
-    //   {/* <a href="#services" className={activeNav === '#services' ? 'active' : ''} onClick={() => setActiveNav('#services')}><MdOutlineDesignServices /></a> */}
-    //   <a href="#portfolio" className={activeNav === '#portfolio' ? 'active' : ''} onClick={() => setActiveNav('#portfolio')}><BiCustomize /></a>
-    //   {/* <a href="#testimonials" className={activeNav === '#testimonials' ? 'active' : ''} onClick={() => setActiveNav('#testimonials')}><SiCodereview /></a> */}
-    //   <a href="#contact" className={activeNav === '#contact' ? 'active' : ''} onClick={() => setActiveNav('#contact')}><BiChat /></a>
-    // </nav>
   );
 }
 
@@ -92,6 +81,6 @@ const NavItem = ({ navItem, icon, active, handleHover }) => {
       {icon}
     </a>
   );
-};
+}
 
-export default Nav
+export default Nav;
