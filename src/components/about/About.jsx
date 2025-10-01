@@ -19,7 +19,7 @@ const About = () => {
   // Extract the current year from the date
   const currentYear = currentDate.getFullYear();
 
-  const yearsOfExperience = currentYear - constants['first-programming-year']
+  const yearsOfExperience = currentYear - constants['first-programming-year'];
 
   return (
     <section id='about'>
@@ -41,17 +41,41 @@ const About = () => {
               <small>{yearsOfExperience}+ Years</small>
             </article>
 
-            <article className='about__card'>
-              <BiLibrary className='about__icon' />
-              <a href="#portfolio"><h5>Projects</h5></a>
-              <small>5+ projects</small>
+            <article className='about__card clickable-card'>
+              <a href="#portfolio" className='about__card-link' onClick={(e) => {
+                e.preventDefault();
+                const target = document.getElementById('portfolio');
+                if (target) {
+                  target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  window.history.pushState(null, '', '#portfolio');
+                } else {
+                  window.location.hash = 'portfolio';
+                }
+              }}>
+                <BiLibrary className='about__icon' />
+                <h5>Projects</h5>
+                <small>5+ projects</small>
+              </a>
             </article>
 
             {/* To do later */}
-            <article className='about__card merge__card'>
-              <FiUsers className='about__icon' />
-              <h5>Volunteering Work</h5>
-              <small>Currently part of 2 incredible clubs</small>
+            <article className='about__card merge__card clickable-card'>
+              <a href="#volunteering" className='about__card-link' onClick={(e) => {
+                // Optional smooth scroll enhancement (native hash jump still works if JS disabled)
+                e.preventDefault();
+                const target = document.getElementById('volunteering');
+                if (target) {
+                  target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  // Update the URL hash without instant jump
+                  window.history.pushState(null, '', '#volunteering');
+                } else {
+                  window.location.hash = 'volunteering';
+                }
+              }}>
+                <FiUsers className='about__icon' />
+                <h5>Volunteering Work</h5>
+                <small>Have been part of 2 incredible clubs</small>
+              </a>
             </article>
             {/* <article className='about__card'>
               <FaAward className='about__icon'/>

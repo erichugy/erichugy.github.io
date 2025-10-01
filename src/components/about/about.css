@@ -93,6 +93,31 @@ a {
   color: var(--color-light);
 }
 
+.clickable-card {
+  cursor: pointer;
+}
+
+.about__card-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+  height: 100%;
+}
+
+.about__card-link:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 4px;
+}
+
+.about__card.clickable-card:hover {
+  background: transparent;
+  border-color: var(--color-primary);
+}
+
 /* --- Media Queries (Medium Devices) --- */
 
 @media screen and (max-width: 1024px) {
