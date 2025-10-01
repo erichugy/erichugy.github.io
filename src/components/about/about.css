@@ -6,8 +6,11 @@ LICENSE file in the root directory of this source tree.  */
 
 .about__container {
   display: grid;
-  grid-template-columns: 45% 40%;
-  gap: 15%;
+  /* Reduce horizontal space: narrower gap and refined column widths */
+  grid-template-columns: 48% 42%;
+  column-gap: 5%;
+  row-gap: 0; /* no vertical gap needed */
+  align-items: center; /* Vertically center image and content columns */
 }
 
 .about__me {
@@ -41,6 +44,19 @@ LICENSE file in the root directory of this source tree.  */
 
 .about__me-image > img {
   object-position: 0% -100%;
+}
+
+/* Large screen image sizing */
+@media screen and (min-width: 1200px) {
+  .about__me {
+    max-width: 700px;
+    max-height: 700px; /* coupled with aspect-ratio keeps it square */
+    justify-self: center;
+  }
+  .about__me-image {
+    max-width: 100%;
+    max-height: 100%;
+  }
 }
 
 .about__cards {
@@ -93,12 +109,38 @@ a {
   color: var(--color-light);
 }
 
+.clickable-card {
+  cursor: pointer;
+}
+
+.about__card-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+  height: 100%;
+}
+
+.about__card-link:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 4px;
+}
+
+.about__card.clickable-card:hover {
+  background: transparent;
+  border-color: var(--color-primary);
+}
+
 /* --- Media Queries (Medium Devices) --- */
 
 @media screen and (max-width: 1024px) {
   .about__container {
     grid-template-columns: 1fr;
     gap: 0;
+    align-items: start; /* Reset vertical alignment when stacked */
   }
 
   .about__me {

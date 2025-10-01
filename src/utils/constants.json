@@ -5,39 +5,40 @@
   "github": "https://github.com/erichugy",
   "linkedin": "https://www.linkedin.com/in/erichugy/",
   "experience__frontend": [
-    {
-      "tech": "HTML",
-      "lvl": "intermediate"
-    },
-    {
-      "tech": "CSS",
-      "lvl": "intermediate"
-    },
-    {
-      "tech": "Javascript",
-      "lvl": "intermediate"
-    },
-    {
-      "tech": "React",
-      "lvl": "basic"
-    }
+    { "tech": "HTML", "lvl": "Advanced" },
+    { "tech": "Javascript (and Typescript)", "lvl": "Advanced" },
+    { "tech": "Python", "lvl": "Advanced" },
+    { "tech": "Bash/Shell scripting", "lvl": "Intermediate" },
+    { "tech": "CSS", "lvl": "Intermediate" },
+    { "tech": "Java", "lvl": "Intermediate" },
+    { "tech": "R", "lvl": "Intermediate" },
+    { "tech": "SQL", "lvl": "Intermediate" },
+    { "tech": "C++", "lvl": "Basic" },
+    { "tech": "Golang", "lvl": "Basic" },
+    { "tech": "OCaml", "lvl": "Basic" },
+    { "tech": "React", "lvl": "Basic" }
   ],
   "experience__backend": [
-    {
-      "tech": "Python",
-      "lvl": "intermediate"
-    },
-    {
-      "tech": "Java",
-      "lvl": "intermediate"
-    },
-    {
-      "tech": "C",
-      "lvl": "basic"
-    },
-    {
-      "tech": "R",
-      "lvl": "intermediate"
-    }
+  { "tech": "Git", "lvl": "Advanced" },
+  { "tech": "GitHub", "lvl": "Advanced" },
+  { "tech": "SuiteScript", "lvl": "Advanced" },
+  { "tech": "Docker", "lvl": "Intermediate" },
+  { "tech": "Jupyter Notebooks", "lvl": "Intermediate" },
+  { "tech": "Linux", "lvl": "Intermediate" },
+  { "tech": "Matplotlib", "lvl": "Intermediate" },
+  { "tech": "NumPy", "lvl": "Intermediate" },
+  { "tech": "Pandas", "lvl": "Intermediate" },
+  { "tech": "Scikit-Learn", "lvl": "Intermediate" },
+  { "tech": "AWS", "lvl": "Basic" },
+  { "tech": "EC2", "lvl": "Basic" },
+  { "tech": "Express JS", "lvl": "Basic" },
+  { "tech": "FastAPI", "lvl": "Basic" },
+  { "tech": "Flask", "lvl": "Basic" },
+  { "tech": "Jira", "lvl": "Basic" },
+  { "tech": "Node JS", "lvl": "Basic" },
+  { "tech": "PostgreSQL", "lvl": "Basic" },
+  { "tech": "Pytorch", "lvl": "Basic" },
+  { "tech": "React", "lvl": "Basic" },
+  { "tech": "Seaborn", "lvl": "Basic" }
   ]
 }

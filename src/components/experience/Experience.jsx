@@ -15,11 +15,11 @@ const Experience = () => {
   return (
     <section id='experience'>
       <h5>Skills</h5>
-      <h2>My Skills</h2>
+      <h2>Tools</h2>
 
       <div className="container experience__container">
         <div className="experience__frontend">
-          <h3>Frontend Development</h3>
+          <h3>Languages</h3>
           <div className="experience__content">
             {
               constants.experience__frontend.map(({tech, lvl}) => {
@@ -38,8 +38,8 @@ const Experience = () => {
         </div>
 
         <div className="experience__backend">
-          <h3>Backend Development</h3>
-          <div className="experience__content">
+          <h3>Technologies</h3>
+          <div className="experience__content" style={{paddingLeft: '10%'}}>
             {
               constants.experience__backend.map(({tech, lvl}) => {
                 return(
