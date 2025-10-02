@@ -46,21 +46,21 @@ const Contact = () => {
           <article className="contact__option">
             <MdOutlineEmail className="contact__option-icon" />
             <h4>Email</h4>
-            {/* <h5>{email}</h5> */}
-            <a href={`mailto:${constants.email}`} target='_blank'>Send a message</a>
+            <h5>{constants.email}</h5>
+            <a href={`mailto:${constants.email}`} target='_blank' rel="noreferrer">Send a message</a>
           </article>
 
           <article className="contact__option">
             <RiMessengerFill className="contact__option-icon"/>
             <h4>Messenger</h4>
-            {/* <h5>Eric Huang</h5> */}
-            <a href="https://m.me/ewic.hugy" target='_blank'>Send a message</a>
+            <h5>Eric Huang</h5>
+            <a href="https://m.me/ewic.hugy" target='_blank' rel="noreferrer">Send a message</a>
           </article>
 
           {/* <article className="contact__option">
             <MdOutlineEmail />
             <h4>Email</h4>
-            <h5>{email}</h5>
+            <h5>{constants.email}</h5>
             <a href="www.linkedin.com/in/erichugy">Send a message</a>
           </article> */}
         </div>
