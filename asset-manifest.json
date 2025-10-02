@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.bf4b31ac.css",
-    "main.js": "/static/js/main.561316c7.js",
+    "main.js": "/static/js/main.0a8306de.js",
     "static/media/about-me.jpg": "/static/media/about-me.0e96166859a0f20bbca4.jpg",
     "static/media/polyai-stroke.png": "/static/media/polyai-stroke.412eb199ece821ece512.png",
     "static/media/trading-bot-resized.png": "/static/media/trading-bot-resized.f17c4e694be8195838dd.png",
@@ -13,10 +13,10 @@
     "static/media/cc9-censorship.png": "/static/media/cc9-censorship.a0a99a473643d5b9a413.png",
     "index.html": "/index.html",
     "main.bf4b31ac.css.map": "/static/css/main.bf4b31ac.css.map",
-    "main.561316c7.js.map": "/static/js/main.561316c7.js.map"
+    "main.0a8306de.js.map": "/static/js/main.0a8306de.js.map"
   },
   "entrypoints": [
     "static/css/main.bf4b31ac.css",
-    "static/js/main.561316c7.js"
+    "static/js/main.0a8306de.js"
   ]
 }
