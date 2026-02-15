@@ -8,7 +8,7 @@ export default function Hero() {
           {/* Left Content */}
           <div className="space-y-6">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-heading leading-tight">
-              Hello, I'm{" "}
+              Hello, I&apos;m{" "}
               <span className="text-accent">Eric Huang</span>
             </h1>
 
@@ -17,8 +17,8 @@ export default function Hero() {
             </h2>
 
             <p className="text-lg text-body leading-relaxed max-w-lg">
-              I'm a full stack developer with a passion for building efficient,
-              user-friendly websites and applications. Let's work together to
+              I&apos;m a full stack developer with a passion for building efficient,
+              user-friendly websites and applications. Let&apos;s work together to
               bring your vision to life.
             </p>
 

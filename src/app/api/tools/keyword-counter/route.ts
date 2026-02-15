@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+
 import { createKeywordCounterJob, getKeywordCounterJob } from "@/lib/keywordCounterJobs";
 
 export const runtime = "nodejs";

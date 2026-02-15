@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+
 import { NAV_LINKS } from "@/lib/constants";
 
 export default function Navbar() {

@@ -1,7 +1,7 @@
-import fs from "node:fs/promises";
-import fsSync from "node:fs";
-import path from "node:path";
 import { randomUUID } from "node:crypto";
+import fsSync from "node:fs";
+import fs from "node:fs/promises";
+import path from "node:path";
 
 const API_BASE_URL = "https://api.botpress.cloud/v1/chat/messages";
 const PAGE_LIMIT = 700;
@@ -334,8 +334,8 @@ async function fetchMessagesPage(params: {
   for (let attempt = 1; attempt <= MAX_RETRIES; attempt += 1) {
     try {
       return await requestJson(url.toString(), headers);
-    } catch (err) {
-      const error = err as Error & {
+    } catch (cause) {
+      const error = cause as Error & {
         response?: { status: number; body: string; headers: Headers };
       };
       const status = error.response?.status ?? 0;
@@ -343,7 +343,7 @@ async function fetchMessagesPage(params: {
 
       if (!retryable || attempt === MAX_RETRIES) {
         const body = error.response?.body ? String(error.response.body).slice(0, 700) : error.message;
-        throw new Error(`API request failed after retries: ${body}`);
+        throw new Error(`API request failed after retries: ${body}`, { cause });
       }
 
       const waitSeconds = parseRetrySeconds(error.response?.headers ?? new Headers(), attempt);
