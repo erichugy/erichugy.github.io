@@ -9,7 +9,7 @@ export default function About() {
               About Me
             </h2>
             <p className="text-lg text-body leading-relaxed">
-              I'm a passionate full stack developer with experience creating custom
+              I&apos;m a passionate full stack developer with experience creating custom
               websites and applications. I specialize in responsive design,
               front-end development, and building sites that are both beautiful
               and functional.

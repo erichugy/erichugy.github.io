@@ -1,7 +1,8 @@
 import Link from "next/link";
-import Navbar from "@/components/Navbar";
+
 import Footer from "@/components/Footer";
 import KeywordCounterTool from "@/components/KeywordCounterTool";
+import Navbar from "@/components/Navbar";
 
 const PROJECTS = [
   {
