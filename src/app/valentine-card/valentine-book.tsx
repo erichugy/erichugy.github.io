@@ -8,44 +8,69 @@ import styles from "./valentine-card.module.css";
 type CardPage = {
   body: string;
   id: string;
+  leftPage?: {
+    fit?: "contain" | "cover";
+    imageSrc?: string;
+    position?: string;
+  };
   role: "cover" | "inside" | "end";
   title: string;
 };
 
 const CARD_PAGES: CardPage[] = [
   {
-    body: "A little card-book made to open one page at a time.",
+    body: "",
     id: "cover",
+    leftPage: {
+      fit: "cover",
+      imageSrc: "/vday/valentine-left-1.png",
+      position: "center",
+    },
     role: "cover",
     title: "Coucou",
   },
   {
-    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Vivamus tristique luctus diam et lacinia.",
+    body: "A year and a half ago, I met a sexy leopard. It wasn't a banana, but it was still everything I wanted. I'm so truely happy we kiss that day.",
     id: "page-1",
+    leftPage: {
+      fit: "cover",
+      imageSrc: "/vday/valentine-left-2.png",
+      position: "center",
+    },
     role: "inside",
-    title: "Page One",
+    title: "I",
   },
   {
-    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec nibh id magna vestibulum tempus vel vitae turpis.",
+    body: "Thank you for always picking up my calls to listen to me blab about random things. Thank you for always making sure I'm fed and giving me your leftovers. Thank you for styling me and thinking about me whenever you go shopping. Thank you for loving me even when I'm stinky. Most of all, thank you for reminding me what it's like to be happy.",
     id: "page-2",
+    leftPage: {
+      fit: "cover",
+      imageSrc: "/vday/valentine-left-3.png",
+      position: "center",
+    },
     role: "inside",
-    title: "Page Two",
+    title: "Love",
   },
   {
-    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sed odio vel ante feugiat bibendum quis at lacus.",
+    body: "I love your character and for being able to be a happy person despite the messy past few months you've had. I'm happy when I wake up knowing I get to walk to you at the end of the day. I'm always shocked at how pretty you are especially when we go out on dates. The best way to put it is that you're the shrimp to my Nugget.",
     id: "page-3",
+    leftPage: {
+      fit: "contain",
+      imageSrc: "/vday/valentine-left-4.png",
+      position: "center",
+    },
     role: "inside",
-    title: "Page Three",
+    title: "You",
   },
   {
-    body: "The End",
+    body: "- The luckiest person in the world. Who is also the sexiest hottest most alpha (better then I-geon in the pool scene) man you know.",
     id: "the-end",
     role: "end",
-    title: "The End",
+    title: "I love you",
   },
 ];
 
-const CUSTOM_SUBTITLE = "The most amazing and beautiful angel of a person in the world who makes me feel like the luckiest person in the world.";
+const CUSTOM_SUBTITLE = "The most amazing and beautiful angel of a person in the world.";
 
 function removeBlueBackdrop(image: HTMLImageElement): string {
   const canvas = document.createElement("canvas");
@@ -54,7 +79,7 @@ function removeBlueBackdrop(image: HTMLImageElement): string {
 
   const context = canvas.getContext("2d");
   if (!context) {
-    return "/valentine-cover-cutout.svg";
+    return "/vday/valentine-cover-cutout.svg";
   }
 
   context.drawImage(image, 0, 0);
@@ -126,10 +151,7 @@ function removeBlueBackdrop(image: HTMLImageElement): string {
 
 export function ValentineBook() {
   const [turnedPages, setTurnedPages] = useState(0);
-  const [coverArtSource, setCoverArtSource] = useState("/valentine-cover-cutout.svg");
-  const [leftPageImages, setLeftPageImages] = useState<Record<number, string | null>>(
-    {},
-  );
+  const [coverArtSource, setCoverArtSource] = useState("/vday/valentine-cover-cutout.svg");
   const maxTurns = CARD_PAGES.length - 1;
   const hasSpreadOpen = turnedPages > 0;
 
@@ -137,9 +159,9 @@ export function ValentineBook() {
     let active = true;
     const coverImage = new window.Image();
     const coverCandidates = [
-      "/valentine-cover.png",
-      "/valentine-cover.jpg",
-      "/valentine-cover.jpeg",
+      "/vday/valentine-cover.png",
+      "/vday/valentine-cover.jpg",
+      "/vday/valentine-cover.jpeg",
     ];
 
     const tryCoverAtIndex = (index: number) => {
@@ -148,7 +170,7 @@ export function ValentineBook() {
       }
 
       if (index >= coverCandidates.length) {
-        setCoverArtSource("/valentine-cover-cutout.svg");
+        setCoverArtSource("/vday/valentine-cover-cutout.svg");
         return;
       }
 
@@ -167,55 +189,6 @@ export function ValentineBook() {
     };
 
     tryCoverAtIndex(0);
-
-    return () => {
-      active = false;
-    };
-  }, []);
-
-  useEffect(() => {
-    let active = true;
-
-    const resolveImage = async (
-      candidates: string[],
-    ): Promise<string | null> => {
-      for (const source of candidates) {
-        const exists = await new Promise<boolean>((resolve) => {
-          const image = new window.Image();
-          image.onload = () => resolve(true);
-          image.onerror = () => resolve(false);
-          image.src = source;
-        });
-
-        if (exists) {
-          return source;
-        }
-      }
-      return null;
-    };
-
-    const loadLeftPageImages = async () => {
-      const loaded: Record<number, string | null> = {};
-
-      for (let index = 0; index < CARD_PAGES.length; index += 1) {
-        const pageNumber = index + 1;
-        const imageSource = await resolveImage([
-          `/valentine-left-${pageNumber}.png`,
-          `/valentine-left-${pageNumber}.jpg`,
-          `/valentine-left-${pageNumber}.jpeg`,
-          "/valentine-left.png",
-          "/valentine-left.jpg",
-          "/valentine-left.jpeg",
-        ]);
-        loaded[index] = imageSource;
-      }
-
-      if (active) {
-        setLeftPageImages(loaded);
-      }
-    };
-
-    void loadLeftPageImages();
 
     return () => {
       active = false;
@@ -281,12 +254,17 @@ export function ValentineBook() {
 
                 <div className={`${styles.face} ${styles.backFace}`}>
                   <div className={styles.leftPageSurface}>
-                    {leftPageImages[index] ? (
+                    {page.leftPage?.imageSrc ? (
                       <NextImage
                         alt={`Left page image ${index + 1}`}
                         className={styles.leftPageImage}
                         fill
-                        src={leftPageImages[index]!}
+                        sizes="(max-width: 560px) 42vw, 300px"
+                        src={page.leftPage.imageSrc}
+                        style={{
+                          objectFit: page.leftPage.fit ?? "cover",
+                          objectPosition: page.leftPage.position ?? "center",
+                        }}
                         unoptimized
                       />
                     ) : null}
