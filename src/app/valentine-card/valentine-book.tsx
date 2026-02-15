@@ -1,7 +1,7 @@
 "use client";
 
 import NextImage from "next/image";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 
 import styles from "./valentine-card.module.css";
 
@@ -44,6 +44,8 @@ const CARD_PAGES: CardPage[] = [
     title: "The End",
   },
 ];
+
+const CUSTOM_SUBTITLE = "The most amazing and beautiful angel of a person in the world who makes me feel like the luckiest person in the world.";
 
 function removeBlueBackdrop(image: HTMLImageElement): string {
   const canvas = document.createElement("canvas");
@@ -125,7 +127,9 @@ function removeBlueBackdrop(image: HTMLImageElement): string {
 export function ValentineBook() {
   const [turnedPages, setTurnedPages] = useState(0);
   const [coverArtSource, setCoverArtSource] = useState("/valentine-cover-cutout.svg");
-  const [isFallbackCover, setIsFallbackCover] = useState(true);
+  const [leftPageImages, setLeftPageImages] = useState<Record<number, string | null>>(
+    {},
+  );
   const maxTurns = CARD_PAGES.length - 1;
   const hasSpreadOpen = turnedPages > 0;
 
@@ -145,7 +149,6 @@ export function ValentineBook() {
 
       if (index >= coverCandidates.length) {
         setCoverArtSource("/valentine-cover-cutout.svg");
-        setIsFallbackCover(true);
         return;
       }
 
@@ -154,7 +157,6 @@ export function ValentineBook() {
           return;
         }
         setCoverArtSource(removeBlueBackdrop(coverImage));
-        setIsFallbackCover(false);
       };
 
       coverImage.onerror = () => {
@@ -171,15 +173,54 @@ export function ValentineBook() {
     };
   }, []);
 
-  const pageHint = useMemo(() => {
-    if (turnedPages === maxTurns) {
-      return "You reached The End. Click the left page to flip back.";
-    }
-    if (turnedPages > 0) {
-      return "Click right page edge to turn, or left page to go back.";
-    }
-    return "Click the right page edge to turn.";
-  }, [maxTurns, turnedPages]);
+  useEffect(() => {
+    let active = true;
+
+    const resolveImage = async (
+      candidates: string[],
+    ): Promise<string | null> => {
+      for (const source of candidates) {
+        const exists = await new Promise<boolean>((resolve) => {
+          const image = new window.Image();
+          image.onload = () => resolve(true);
+          image.onerror = () => resolve(false);
+          image.src = source;
+        });
+
+        if (exists) {
+          return source;
+        }
+      }
+      return null;
+    };
+
+    const loadLeftPageImages = async () => {
+      const loaded: Record<number, string | null> = {};
+
+      for (let index = 0; index < CARD_PAGES.length; index += 1) {
+        const pageNumber = index + 1;
+        const imageSource = await resolveImage([
+          `/valentine-left-${pageNumber}.png`,
+          `/valentine-left-${pageNumber}.jpg`,
+          `/valentine-left-${pageNumber}.jpeg`,
+          "/valentine-left.png",
+          "/valentine-left.jpg",
+          "/valentine-left.jpeg",
+        ]);
+        loaded[index] = imageSource;
+      }
+
+      if (active) {
+        setLeftPageImages(loaded);
+      }
+    };
+
+    void loadLeftPageImages();
+
+    return () => {
+      active = false;
+    };
+  }, []);
 
   return (
     <main className={styles.scene}>
@@ -188,8 +229,10 @@ export function ValentineBook() {
 
       <section className={styles.cardArea}>
         <header className={styles.pageHeader}>
-          <h1 className={styles.title}>Valentine Card Book</h1>
-          <p className={styles.subtitle}>{pageHint}</p>
+          <h1 className={styles.title}>To: Ning</h1>
+          {CUSTOM_SUBTITLE ? (
+            <p className={styles.subtitle}>{CUSTOM_SUBTITLE}</p>
+          ) : null}
         </header>
 
         <div
@@ -201,12 +244,17 @@ export function ValentineBook() {
             const isTopPage = index === turnedPages;
             const isCover = page.role === "cover";
             const isEnd = page.role === "end";
+            const zIndex = isTopPage
+              ? CARD_PAGES.length + 50
+              : isTurned
+                ? CARD_PAGES.length + index
+                : CARD_PAGES.length - index;
 
             return (
               <article
                 className={`${styles.sheet} ${isTurned ? styles.sheetTurned : ""}`}
                 key={page.id}
-                style={{ zIndex: CARD_PAGES.length - index }}
+                style={{ zIndex }}
               >
                 <div className={`${styles.face} ${styles.frontFace}`}>
                   {isCover ? (
@@ -219,9 +267,6 @@ export function ValentineBook() {
                         unoptimized
                         width={460}
                       />
-                      {isFallbackCover ? (
-                        <p className={styles.coverLabel}>COUCOU</p>
-                      ) : null}
                     </div>
                   ) : (
                     <div className={styles.pageContent}>
@@ -235,15 +280,17 @@ export function ValentineBook() {
                 </div>
 
                 <div className={`${styles.face} ${styles.backFace}`}>
-                  {isCover ? (
-                    <div className={styles.insideCover}>
-                      <p className={styles.insideCoverText}>
-                        Happy Valentine&apos;s Day
-                      </p>
-                    </div>
-                  ) : (
-                    <div className={styles.pageBackPattern} />
-                  )}
+                  <div className={styles.leftPageSurface}>
+                    {leftPageImages[index] ? (
+                      <NextImage
+                        alt={`Left page image ${index + 1}`}
+                        className={styles.leftPageImage}
+                        fill
+                        src={leftPageImages[index]!}
+                        unoptimized
+                      />
+                    ) : null}
+                  </div>
                 </div>
               </article>
             );

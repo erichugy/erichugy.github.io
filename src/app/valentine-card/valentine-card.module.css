@@ -65,9 +65,9 @@
 
 .subtitle {
   color: var(--ink-soft);
-  font-family: "Snell Roundhand", "Apple Chancery", "Brush Script MT", cursive;
-  font-size: clamp(1.25rem, 2.7vw, 1.8rem);
-  margin: 0.35rem 0 0;
+  font-family: "Avenir Next", Avenir, "Trebuchet MS", sans-serif;
+  font-size: 10pt;
+  margin: 0.25rem 0 0;
 }
 
 .book {
@@ -95,7 +95,7 @@
 }
 
 .sheetTurned {
-  transform: rotateY(-178deg);
+  transform: rotateY(-179.8deg);
 }
 
 .face {
@@ -140,32 +140,6 @@
   width: min(99%, 680px);
 }
 
-.coverLabel {
-  color: #092642;
-  font-family: "Marker Felt", "Bradley Hand", "Comic Sans MS", cursive;
-  font-size: clamp(1.5rem, 3vw, 2rem);
-  letter-spacing: 0.11em;
-  margin: 0;
-}
-
-.insideCover {
-  align-items: center;
-  background:
-    linear-gradient(145deg, #ffe5ef 0%, #fff4d8 56%, #f0fbff 100%);
-  display: flex;
-  height: 100%;
-  justify-content: center;
-  padding: 1rem;
-}
-
-.insideCoverText {
-  color: #c53468;
-  font-family: "Snell Roundhand", "Apple Chancery", "Brush Script MT", cursive;
-  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
-  margin: 0;
-  text-align: center;
-}
-
 .pageContent {
   background:
     radial-gradient(circle at 100% 100%, rgb(246 84 127 / 0.11) 0%, rgb(246 84 127 / 0%) 35%),
@@ -204,12 +178,17 @@
   text-transform: uppercase;
 }
 
-.pageBackPattern {
+.leftPageSurface {
   background:
-    linear-gradient(45deg, #ffe2ef 25%, #ffedf4 25%, #ffedf4 50%, #ffe2ef 50%, #ffe2ef 75%, #ffedf4 75%, #ffedf4 100%);
-  background-size: 42px 42px;
+    radial-gradient(circle at 82% 16%, rgb(240 249 255 / 0.45) 0%, rgb(240 249 255 / 0%) 40%),
+    linear-gradient(165deg, #fffef8 0%, #fff8f2 55%, #f4fbff 100%);
   height: 100%;
+  position: relative;
   width: 100%;
+}
+
+.leftPageImage {
+  object-fit: cover;
 }
 
 .leftHitZone,
@@ -221,7 +200,7 @@
   position: absolute;
   top: 0;
   width: 50%;
-  z-index: 40;
+  z-index: 500;
 }
 
 .leftHitZone {
